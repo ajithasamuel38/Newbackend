@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracking Application</title>
+    <!-- Include CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Day to Day Expenses</h1>
+        <div id="dateTime"></div>
+        
+        <!-- Expenses and Incomes Table -->
+        <h2 class="section-heading">Expenses and Incomes</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Income</th>
+                    <th>Expense</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated with data from backend -->
+            </tbody>
+        </table>
+        
+        <!-- Yearly Report Table -->
+        <h2 class="section-heading">Yearly Report</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Income</th>
+                    <th>Expense</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated with data from backend -->
+            </tbody>
+        </table>
+        
+        <!-- Notes Report for the Year -->
+        <h2 class="section-heading">Notes Report for the Year</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated with data from backend -->
+            </tbody>
+        </table>
+        
+        <!-- Download Button for Expenses -->
+        <button id="downloadBtn">Download Expenses</button>
+    </div>
+
+    <!-- Include JavaScript file for interaction -->
+    <script src="script.js"></script>
+    <script>
+        // Get the div element to display date and time
+        const dateTimeElement = document.getElementById('dateTime');
+
+        // Function to update date and time
+        function updateDateTime() {
+            // Create a new Date object
+            const now = new Date();
+            // Format date and time as desired
+            const dateTimeString = now.toLocaleString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true
+            });
+            // Update the content of the div
+            dateTimeElement.textContent = dateTimeString;
+        }
+
+        // Call the function initially to display date and time
+        updateDateTime();
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>

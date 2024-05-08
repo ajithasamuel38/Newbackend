@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="expense">
+        Choose expense amount: <input type="number" id="amount"><br><br>
+        Choose description: <input type="text" id="description"><br><br>
+        <label for="category">Choose a Category:</label>
+        <select id="category" name="category">
+            <option value="food">Food</option>
+            <option value="petrol">Petrol</option>
+            <option value="cinema">Cinema</option>
+            <!-- Additional categories -->
+            <option value="groceries">Groceries</option>
+            <option value="utilities">Utilities</option>
+            <option value="clothing">Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="travel">Travel</option>
+        </select>
+        <button type="submit">Add Expense</button>
+    </form>
+    <!-- Expenses Per Page Selection -->
+    <label for="expensesPerPage">Expenses Per Page:</label>
+    <select id="expensesPerPage" onchange="updateExpensesPerPage()">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <!-- Add more options as needed -->
+    </select>
+    <!-- Premium Membership Button -->
+    <button id="rzy_btn">Buy Premium Membership</button>
+    <div id="premiumMessage" style="display: none; color: green;"></div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <ul id="expenseList">
+ 
+    </ul>
+    
+    <div id="paginationButtons"></div>
+    <ul id="leaderboard"></ul>
+    <ul id="previousDownloads"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+    <script src="expense.js"></script>
+
+</body>
+</html>
