@@ -1,0 +1,60 @@
+/* Expense list */
+#addedexpense {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #addedexpense li {
+    margin-bottom: 10px;
+  }
+  
+  /* Delete button */
+  .delete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    background-color: darkred;
+  }
+  
+  /* Pagination buttons */
+  #paginationButtons {
+    margin-top: 20px;
+  }
+  
+  #paginationButtons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  #paginationButtons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Leaderboard */
+  #leaderboard {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #leaderboard li {
+    margin-bottom: 10px;
+  }
+  
+  /* Previous downloads */
+  #previousDownloads {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #previousDownloads li {
+    margin-bottom: 10px;
+  }
